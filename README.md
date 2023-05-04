@@ -3,4 +3,5 @@
 <a href="https://codeclimate.com/github/u-shev/python-project-50/maintainability"><img src="https://api.codeclimate.com/v1/badges/598b239214ffa18e63ca/maintainability" /></a>
 
 Сравнение двух плоских файлов JSON
-https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA
+<a href="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA" target="_blank"><img src="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA.svg" /></a>
+
