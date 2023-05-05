@@ -10,10 +10,10 @@ package-install:
 		python3 -m pip install --user dist/*.whl --force-reinstall
 
 lint:
-		poetry run flake8 gendiff
-		
+	                poetry run flake8 gendiff
+
 test:
-              poetry run pytest 
-		
-test-coverage:
-               pytest --cov
+	                poetry run pytest
+
+test-coversge:
+	                pytest --cov
