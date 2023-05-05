@@ -15,5 +15,5 @@ lint:
 test:
 	                poetry run pytest
 
-test-coversge:
+test-coverage:
 	                pytest --cov
