@@ -1,3 +1,6 @@
 .venv
 dist/
 gendiff/__pycache__/
+test-reporter-latest-windows-amd64
+.coverage
+coverage.xml
