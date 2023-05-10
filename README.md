@@ -7,6 +7,6 @@
 <a href="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA" target="_blank"><img src="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA.svg" /></a>
 
 Сравнение двух плоских файлов YML
-<a href="[https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA]" target="_blank"><img src="[https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA]).svg" /></a>
+<a href="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA" target="_blank"><img src="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA.svg" /></a>
  
 
