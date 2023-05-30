@@ -8,5 +8,8 @@
 
 Сравнение двух плоских файлов YML
 <a href="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA" target="_blank"><img src="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA.svg" /></a>
+
+Рекурсивное сравнение 
+<a href="https://asciinema.org/a/TqEnctyIAiBVryj2VGr7E1Jxz" target="_blank"><img src="https://asciinema.org/a/TqEnctyIAiBVryj2VGr7E1Jxz.svg" /></a>
  
 
