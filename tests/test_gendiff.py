@@ -1,6 +1,7 @@
 import pytest
 from gendiff import generate_diff
 from tests.fixtures.stylish_result import STYLISH_RESULT
+from tests.fixtures.simple_result import SIMPLE_RESULT
 from tests.fixtures.plain_result import PLAIN_RESULT
 
 @pytest.fixture
@@ -24,12 +25,49 @@ def get_result(path):
     return result
 
 
-def test_generate_diff(paths):
-    result_diff_json = str(generate_diff(paths["json1"], paths["json2"]))
-    result_diff_yml = str(generate_diff(paths["yml1"], paths["yml2"]))
-    result_diff_recursive_json = str(generate_diff(paths["rec_json1"], paths["rec_json2"]))
-    result_diff_recursive_yml = str(generate_diff(paths["rec_yml1"], paths["rec_yml2"]))
+@pytest.fixture
+def format_name():
+    format_name = {
+        "stylish": "stylish",
+        "plain": "plain",
+    }
+    return format_name
+
+
+def test_generate_diff(paths, format_name):
+    result_diff_json = generate_diff(
+        paths["json1"],
+        paths["json2"],
+        format_name["stylish"],
+    )
+    result_diff_yml = generate_diff(
+        paths["yml1"],
+        paths["yml2"],
+        format_name["stylish"],
+    )
+    result_diff_recursive_json = generate_diff(
+        paths["rec_json1"],
+        paths["rec_json2"],
+        format_name["stylish"],
+    )
+    result_diff_recursive_yml = generate_diff(
+        paths["rec_yml1"],
+        paths["rec_yml2"],
+        format_name["stylish"],
+    )
+    result_diff_plain_json = generate_diff(
+        paths["rec_json1"],
+        paths["rec_json2"],
+        format_name["plain"],
+    )
+    result_diff_plain_yml = generate_diff(
+        paths["rec_yml1"],
+        paths["rec_yml2"],
+        format_name["plain"],
+    )
+    assert result_diff_json == SIMPLE_RESULT
+    assert result_diff_yml == SIMPLE_RESULT
     assert result_diff_recursive_json == STYLISH_RESULT
     assert result_diff_recursive_yml == STYLISH_RESULT
-    assert result_diff_json == PLAIN_RESULT
-    assert result_diff_yml == PLAIN_RESULT
+    assert result_diff_plain_json == PLAIN_RESULT
+    assert result_diff_plain_yml == PLAIN_RESULT
