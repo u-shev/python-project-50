@@ -8,6 +8,6 @@ def formatting(ast, format_name='stylish'):
         'stylish': stylish,
         'plain': plain,
         'json': json,
-        }
+    }
     if format_name in formats:
         return formats[format_name](ast)
