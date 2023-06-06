@@ -11,7 +11,7 @@ STYLISH_RESULT = """{
         }
         setting6: {
             doge: {
-              - wow: #noqa
+              - wow: 
               + wow: so much
             }
             key: value
@@ -41,4 +41,4 @@ STYLISH_RESULT = """{
         }
         fee: 100500
     }
-}"""
+}""" # noqa

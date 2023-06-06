@@ -9,15 +9,15 @@ from tests.fixtures.json_result import JSON_RESULT
 @pytest.fixture
 def paths():
     paths = {
-            "json1": "tests/fixtures/file1.json",
-            "json2": "tests/fixtures/file2.json",
-            "yml1": "tests/fixtures/file1.yml",
-            "yml2": "tests/fixtures/file2.yml",
-            "rec_json1": "tests/fixtures/recursive1.json",
-            "rec_json2": "tests/fixtures/recursive2.json",
-            "rec_yml1": "tests/fixtures/recursive1.yml",
-            "rec_yml2": "tests/fixtures/recursive2.yml",
-            }
+        "json1": "tests/fixtures/file1.json",
+        "json2": "tests/fixtures/file2.json",
+        "yml1": "tests/fixtures/file1.yml",
+        "yml2": "tests/fixtures/file2.yml",
+        "rec_json1": "tests/fixtures/recursive1.json",
+        "rec_json2": "tests/fixtures/recursive2.json",
+        "rec_yml1": "tests/fixtures/recursive1.yml",
+        "rec_yml2": "tests/fixtures/recursive2.yml",
+    }
     return paths
 
 

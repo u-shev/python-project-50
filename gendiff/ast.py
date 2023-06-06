@@ -10,37 +10,37 @@ def make_ast(file1, file2):
                 'key': key,
                 'status': 'added',
                 'value': child2,
-                })
+            })
         elif key not in file2:
             result.append({
                 'key': key,
                 'status': 'removed',
                 'value': child1,
-                })
+            })
         elif isinstance(child1, dict) and isinstance(child2, dict):
             result.append({
                 'key': key,
                 'status': 'nested',
                 'children': make_ast(child1, child2),
-                })
+            })
         elif child1 == child2:
             result.append({
                 'key': key,
                 'status': 'unchanged',
                 'value': child1,
-                })
+            })
         else:
             result.append({
                 'key': key,
                 'status': 'changed',
                 'old_value': child1,
                 'new_value': child2,
-                })
+            })
     return result
 
 
 def build_ast(file1: dict, file2: dict):
     return {
-            'status': 'root',
-            'children': make_ast(file1, file2)
-            }
+        'status': 'root',
+        'children': make_ast(file1, file2)
+    }
