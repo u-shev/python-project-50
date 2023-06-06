@@ -10,7 +10,7 @@ def make_string(value):
     return f"'{value}'"
 
 
-def rendering_node(node: dict, path='') -> str:  
+def rendering_node(node: dict, path='') -> str:
     children = node.get('children')
     current_path = f"{path}{node.get('key')}"
 
@@ -20,7 +20,7 @@ def rendering_node(node: dict, path='') -> str:
         return result
 
     if node['status'] == 'nested':
-        lines = map(lambda child: rendering_node(child, f"{current_path}."), children)
+        lines = map(lambda child: rendering_node(child, f"{current_path}."), children)  # noqa
         result = "\n".join(filter(bool, lines))
         return result
 
