@@ -9,7 +9,11 @@
 Сравнение двух плоских файлов YML
 <a href="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA" target="_blank"><img src="https://asciinema.org/a/wE8kdKBAtSxgbW7VxHg93fOAA.svg" /></a>
 
-Рекурсивное сравнение 
+Рекурсивное сравнение, выод в формате stylish
 <a href="https://asciinema.org/a/TqEnctyIAiBVryj2VGr7E1Jxz" target="_blank"><img src="https://asciinema.org/a/TqEnctyIAiBVryj2VGr7E1Jxz.svg" /></a>
+
+Рекурсивное сравнение, вывод в формате plain
+<a href="https://asciinema.org/a/8eltE0BWnNoQc7Fmm8p7wN5a5" target="_blank"><img src="https://asciinema.org/a/8eltE0BWnNoQc7Fmm8p7wN5a5.svg" /></a>
+
  
 
