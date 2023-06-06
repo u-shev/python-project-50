@@ -3,6 +3,7 @@ from gendiff import generate_diff
 from tests.fixtures.stylish_result import STYLISH_RESULT
 from tests.fixtures.simple_result import SIMPLE_RESULT
 from tests.fixtures.plain_result import PLAIN_RESULT
+from tests.fixtures.json_result import JSON_RESULT
 
 @pytest.fixture
 def paths():
@@ -30,6 +31,7 @@ def format_name():
     format_name = {
         "stylish": "stylish",
         "plain": "plain",
+        "json": "json"
     }
     return format_name
 
@@ -65,9 +67,21 @@ def test_generate_diff(paths, format_name):
         paths["rec_yml2"],
         format_name["plain"],
     )
+    result_diff_json_json = generate_diff(
+        paths["rec_json1"],
+        paths["rec_json2"],
+        format_name["json"],
+    )
+    result_diff_json_yml = generate_diff(
+        paths["rec_yml1"],
+        paths["rec_yml2"],
+        format_name["json"],
+    )
     assert result_diff_json == SIMPLE_RESULT
     assert result_diff_yml == SIMPLE_RESULT
     assert result_diff_recursive_json == STYLISH_RESULT
     assert result_diff_recursive_yml == STYLISH_RESULT
     assert result_diff_plain_json == PLAIN_RESULT
     assert result_diff_plain_yml == PLAIN_RESULT
+    assert result_diff_json_json == JSON_RESULT
+    assert result_diff_json_yml == JSON_RESULT
