@@ -15,5 +15,6 @@
 Рекурсивное сравнение, вывод в формате plain
 <a href="https://asciinema.org/a/8eltE0BWnNoQc7Fmm8p7wN5a5" target="_blank"><img src="https://asciinema.org/a/8eltE0BWnNoQc7Fmm8p7wN5a5.svg" /></a>
 
- 
+Рекурсивное сравнение, вывод в формате json
+<a href="https://asciinema.org/a/RIpaDkyo9qjeIhoyzaURQXMJE" target="_blank"><img src=".shttps://asciinema.org/a/RIpaDkyo9qjeIhoyzaURQXMJEvg" /></a>
 
