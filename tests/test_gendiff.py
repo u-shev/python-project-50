@@ -5,6 +5,7 @@ from tests.fixtures.simple_result import SIMPLE_RESULT
 from tests.fixtures.plain_result import PLAIN_RESULT
 from tests.fixtures.json_result import JSON_RESULT
 
+
 @pytest.fixture
 def paths():
     paths = {

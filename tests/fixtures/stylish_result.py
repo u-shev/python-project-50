@@ -11,7 +11,7 @@ STYLISH_RESULT = """{
         }
         setting6: {
             doge: {
-              - wow: 
+              - wow: #noqa
               + wow: so much
             }
             key: value
