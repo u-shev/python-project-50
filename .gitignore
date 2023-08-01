@@ -4,3 +4,7 @@ gendiff/__pycache__/
 test-reporter-latest-windows-amd64
 .coverage
 coverage.xml
+.pytest_cache
+gendiff/formatters/__pycache__/
+gendiff/scripts/__pycache__/
+tests/__pycache__/
