@@ -14,26 +14,26 @@ def rendering_node(node: dict, path='') -> str:
     children = node.get('children')
     current_path = f"{path}{node.get('key')}"
 
-    if node['status'] == 'root':
+    if node['type'] == 'root':
         lines = map(lambda child: rendering_node(child, path), children)
         result = "\n".join(filter(bool, lines))
         return result
 
-    if node['status'] == 'nested':
+    if node['type'] == 'nested':
         lines = map(lambda child: rendering_node(child, f"{current_path}."), children)  # noqa
         result = "\n".join(filter(bool, lines))
         return result
 
-    if node['status'] == 'changed':
+    if node['type'] == 'changed':
         rendered_old_value = make_string(node.get('old_value'))
         rendered_new_value = make_string(node.get('new_value'))
         return f"Property '{current_path}' was updated. " \
                f"From {rendered_old_value} to {rendered_new_value}"
 
-    if node['status'] == 'removed':
+    if node['type'] == 'removed':
         return f"Property '{current_path}' was removed"
 
-    if node['status'] == 'added':
+    if node['type'] == 'added':
         rendered_value = make_string(node.get('value'))
         return f"Property '{current_path}' was added " \
                f"with value: {rendered_value}"

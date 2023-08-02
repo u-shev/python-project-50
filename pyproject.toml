@@ -6,11 +6,11 @@ authors = ["u-shev <sheveleva.jul@gmail.com>"]
 packages = [
   { include = 'gendiff' },
 ]
-repository = "https://github.com/u-shev/python-project-50",
+repository = "https://github.com/u-shev/python-project-50"
 classifiers=[
           'Development Status :: 5 - Production/Stable',
           'Programming Language :: Python :: 3.8',
-],
+]
 
 
 [tool.poetry.dependencies]

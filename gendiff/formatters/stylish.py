@@ -28,28 +28,28 @@ def rendering_node(node: dict, depth=0) -> str:  # noqa: C901
     rendered_value_old = make_string(node.get('old_value'), depth)
     rendered_value_new = make_string(node.get('new_value'), depth)
 
-    if node['status'] == 'root':
+    if node['type'] == 'root':
         lines = map(lambda child: rendering_node(child, depth + 1), children)
         result = '\n'.join(lines)
         return f'{{\n{result}\n}}'
 
-    if node['status'] == 'nested':
+    if node['type'] == 'nested':
         lines = map(lambda child: rendering_node(child, depth + 1), children)
         result = '\n'.join(lines)
         return f"{indent}  {node['key']}: {{\n{result}\n  {indent}}}"
 
-    if node['status'] == 'changed':
+    if node['type'] == 'changed':
         line1 = f"{indent}- {node['key']}: {rendered_value_old}\n"
         line2 = f"{indent}+ {node['key']}: {rendered_value_new}"
         return line1 + line2
 
-    if node['status'] == 'unchanged':
+    if node['type'] == 'unchanged':
         return f"{indent}  {node['key']}: {rendered_value}"
 
-    if node['status'] == 'removed':
+    if node['type'] == 'removed':
         return f"{indent}- {node['key']}: {rendered_value}"
 
-    if node['status'] == 'added':
+    if node['type'] == 'added':
         return f"{indent}+ {node['key']}: {rendered_value}"
 
 
